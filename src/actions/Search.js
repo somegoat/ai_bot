@@ -8,14 +8,13 @@ export default class extends React.Component {
     const txt = request.input.data;
     const url = "https://api.serpstack/search";
     var rf = [];
-    console.log("hii");
-    const key = import.meta.env.REACT_APP_API_KEY;
+    const key = "";
     console.log(key);
     try {
       const res = await axios.get(url, {
         params: {
           query: txt,
-          access_key: process.env.API_KEY
+          access_key: key
         }
       });
       console.log(res);
